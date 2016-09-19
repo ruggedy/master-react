@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import SideMenu from 'react-native-side-menu';
 
 import HelloWorld from "./components/HelloWorld/index";
+import LoginApp  from "./components/login/index";
 
 interface Props {
 
@@ -12,21 +14,15 @@ interface State {
 }
 
 export default class App extends Component<Props, State> {
+    
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit index.android.js
-                </Text>
-                <Text style={styles.instructions}>
-                    Shake or press menu button for dev menu
-                </Text>
-
-                <HelloWorld style={styles.helloworld} max={10} />
-            </View>
+            <SideMenu menu={<Text> This is new </Text>}
+            >
+                <View style={styles.container}>
+                    <LoginApp  />
+                </View>
+            </SideMenu >
         );
     }
 }

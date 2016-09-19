@@ -12,6 +12,16 @@ declare module "react-native-button" {
     export default class Button extends Component<Props, any> {}
 }
 
+declare module "react-native-material-kit" {
+    const value: any;
+    export default value;
+}
+
+declare module "react-native-side-menu" {
+    const value: any;
+    export default value;
+}
+
 /*
 // If you are lazy and don't care about the strict typings:
 
